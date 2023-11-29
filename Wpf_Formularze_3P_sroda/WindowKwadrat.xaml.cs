@@ -23,5 +23,12 @@ namespace Wpf_Formularze_3P_sroda
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            String wpisanyBok = bok_txt.Text;
+            MessageBox.Show("Wpisano: " + wpisanyBok, "Wartość wpisana",
+                MessageBoxButton.OK, MessageBoxImage.Information);
+        }
     }
 }
