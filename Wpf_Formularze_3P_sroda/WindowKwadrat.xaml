@@ -45,7 +45,7 @@
             Grid.Column="1"
             Margin="10"
             x:Name="bok_txt"
-            Text="0"
+            
             TextChanged="bok_txt_TextChanged"
             >
         </TextBox>
@@ -76,6 +76,16 @@
             Grid.Row="4"
             x:Name="kwadrat"
             />
+        <ComboBox x:Name="kolorki"
+                  Grid.Column="1"
+                  Grid.Row="4"
+                  Margin="10"
+                  SelectedIndex="0">
+            <ComboBoxItem>Red</ComboBoxItem>
+            <ComboBoxItem>Green</ComboBoxItem>
+            <ComboBoxItem>Blue</ComboBoxItem>
+            <ComboBoxItem>Fuchsia</ComboBoxItem>
+        </ComboBox>
 
     </Grid>
 </Window>

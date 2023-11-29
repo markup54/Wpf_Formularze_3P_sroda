@@ -27,6 +27,7 @@ namespace Wpf_Formularze_3P_sroda
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             String wpisanyBok = bok_txt.Text;
+            kwadrat.Fill = (SolidColorBrush)new BrushConverter().ConvertFromString(kolorki.Text);
             double bok;
             MessageBox.Show("Wpisano: " + wpisanyBok, "Wartość wpisana",
                 MessageBoxButton.OK, MessageBoxImage.Information);
@@ -52,8 +53,12 @@ namespace Wpf_Formularze_3P_sroda
 
         private void bok_txt_TextChanged(object sender, TextChangedEventArgs e)
         {
-            kwadrat.Width += 20;
-            kwadrat.Height += 20;   
+            if(double.TryParse(bok_txt.Text,out double boczek))
+            {
+                kwadrat.Width = boczek * 2;
+                kwadrat.Height = boczek * 2;
+                
+            }
         }
     }
 }
