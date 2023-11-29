@@ -28,6 +28,21 @@ namespace Wpf_Formularze_3P_sroda
         {
             String wpisanyBok = bok_txt.Text;
             kwadrat.Fill = (SolidColorBrush)new BrushConverter().ConvertFromString(kolorki.Text);
+            if(przezrocz_chbox.IsChecked == true) {
+                kwadrat.Opacity = 0.5;
+            }
+            else
+            {
+                kwadrat.Opacity = 1;
+            }
+            if(widoczny.IsChecked == true)
+            {
+                kwadrat.Visibility = Visibility.Visible;
+            }
+            if(ukryty.IsChecked == true)
+            {
+                kwadrat.Visibility = Visibility.Hidden;
+            }
             double bok;
             MessageBox.Show("Wpisano: " + wpisanyBok, "Wartość wpisana",
                 MessageBoxButton.OK, MessageBoxImage.Information);
