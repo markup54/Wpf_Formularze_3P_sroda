@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Wpf_Formularze_3P_sroda
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logika interakcji dla klasy WindowKwadrat.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WindowKwadrat : Window
     {
-        public MainWindow()
+        public WindowKwadrat()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            etykieta.FontSize = suwak.Value;
         }
     }
 }

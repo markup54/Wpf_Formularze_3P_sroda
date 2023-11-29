@@ -6,7 +6,29 @@
         xmlns:local="clr-namespace:Wpf_Formularze_3P_sroda"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <TextBlock 
+            FontSize="{Binding ElementName=suwak, Path=Value}"
+            Background="DarkViolet"
+            Foreground="Wheat"
+            TextAlignment="Center"
+            Margin="20"
+            Padding="10"
+            x:Name="tekst"
+            >
+            Jakiś tekst
+        </TextBlock>
+        <Slider Minimum="20"
+               Maximum="45"
+                x:Name="suwak"
+                />
+        <Label
+            x:Name="etykieta"
+            Content="inny napis"/>
+        <Label>jakis napis</Label>
+        <Button Width="200"
+                Click="Button_Click"
+                >Zmien rozmiar tekstu
+        </Button>
+    </StackPanel>
 </Window>
